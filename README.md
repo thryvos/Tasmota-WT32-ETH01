@@ -38,7 +38,7 @@
 ## Steps:
 * Follow the hardware connections described above and connect the jumper.
 * Power up the board, and the red LED on the board should light up.
-* [Download and copy the files from here](https://github.com/thryvos/Tasmota-WT32-ETH01/ESP32) to your local folder.
+* [Download and copy the files from here](https://github.com/thryvos/Tasmota-WT32-ETH01/tree/main/ESP32) to your local folder.
 * Goto the folder you copied, and run the following command, you need to change "/dev/cu.usbserial-1431310" to your own port number.
   ```bash
   esptool.py --chip esp32 --port /dev/cu.usbserial-1431310 --baud 115200 --before default_reset --after hard_reset write_flash -z --flash_mode dout --flash_freq 40m --flash_size detect 0x1000 bootloader_dout_40m.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 tasmota32.bin
